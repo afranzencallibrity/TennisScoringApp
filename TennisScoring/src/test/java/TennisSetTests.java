@@ -1,4 +1,4 @@
-import SpringBoot.TennisSet;
+import Tennis.Set;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -6,16 +6,16 @@ import org.junit.Test;
  * Created by afranzen on 7/10/17.
  */
 public class TennisSetTests {
-    TennisSet set = new TennisSet();
+    Set set = new Set();
     private void addPlayerOneSetPoints(int points) {
         for(int i = 0; i < points; i++) {
-            set.addPointToPlayerOneSet();
+            set.p1WonSetPoint();
         }
     }
 
     private void addPlayerTwoSetPoints(int points) {
         for(int i = 0; i < points; i++) {
-            set.addPointToPlayerTwoSet();
+            set.p2WonSetPoint();
         }
     }
 

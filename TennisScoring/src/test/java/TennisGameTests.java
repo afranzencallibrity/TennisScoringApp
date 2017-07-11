@@ -1,13 +1,13 @@
 /**
  * Created by afranzen on 5/24/17.
  */
-import SpringBoot.TennisGame;
+import Tennis.Game;
 import org.junit.Assert;
 import org.junit.Test;
 
 
 public class TennisGameTests {
-    TennisGame tennis = new TennisGame();
+    Game tennis = new Game();
     private void addPlayerPoints(int points, int player) {
         for(int i = 0; i < points; i++) {
             if(player == 1) {

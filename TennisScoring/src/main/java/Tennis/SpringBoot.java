@@ -1,4 +1,4 @@
-package SpringBoot;
+package Tennis;
 
 /**
  * Created by afranzen on 5/25/17.
@@ -11,8 +11,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @CrossOrigin
 @RestController
-public class Tennis {
-    private TennisMatch match = new TennisMatch();
+public class SpringBoot {
+    private Match match = new Match();
 
     @RequestMapping(value="/tennis", method=GET)
     @ResponseBody
@@ -23,21 +23,21 @@ public class Tennis {
     @RequestMapping(value="/tennis/playerOne", method=GET)
     @ResponseBody
     public String playerOneScored() {
-        match.incrementPlayerOneScore();
+        match.game.playerTwoScored();
         return match.score();
     }
 
     @RequestMapping(value="/tennis/playerTwo", method=GET)
     @ResponseBody
     public String playerTwoScored() {
-        match.incrementPlayerTwoScore();
+        match.game.playerTwoScored();
         return match.score();
     }
 
     @RequestMapping(value="/tennis/newGame", method=GET)
     @ResponseBody
     public String newMatch() {
-        this.match = new TennisMatch();
+        this.match = new Match();
         return "love all";
     }
 

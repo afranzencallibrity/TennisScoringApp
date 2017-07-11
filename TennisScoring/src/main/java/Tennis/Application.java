@@ -1,4 +1,4 @@
-package SpringBoot;
+package Tennis;
 
 /**
  * Created by afranzen on 5/25/17.
