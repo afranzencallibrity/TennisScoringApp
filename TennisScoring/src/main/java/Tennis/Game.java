@@ -65,7 +65,6 @@ public class Game {
         }
         return scoreValue.get(playerOnePoints) + "-" + scoreValue.get(playerTwoPoints);
     }
-
     private boolean isInitialScore() {
         return playerOnePoints == 0 && playerTwoPoints == 0;
     }

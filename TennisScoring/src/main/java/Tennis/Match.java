@@ -9,7 +9,10 @@ public class Match {
     private int currentSet = 0;
 
     public String score() {
-        if(game.set.score().contains("Won") && currentSet < 3) {
+        if(currentSet == 3) {
+            return "Game over";
+        }
+        else if(game.set.score().contains("Won") && currentSet < 3) {
             sets[currentSet] = game.set.getPlayerOneSetPoints() + " " + game.set.getPlayerTwoSetPoints();
             currentSet++;
             game.set = new Set();

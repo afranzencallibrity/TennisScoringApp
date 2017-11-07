@@ -17,7 +17,7 @@ public class SpringBoot {
     @RequestMapping(value="/tennis", method=GET)
     @ResponseBody
     public String tennis() {
-        return "love all";
+        return match.score();
     }
 
     @RequestMapping(value="/tennis/playerOne", method=GET)
@@ -34,10 +34,11 @@ public class SpringBoot {
         return match.score();
     }
 
-    @RequestMapping(value="/tennis/newGame", method=GET)
+    @RequestMapping(value="/tennis/newMatch", method=GET)
     @ResponseBody
     public String newMatch() {
         this.match = new Match();
+        this.match.sets = new String[3];
         return "love all";
     }
 
@@ -46,4 +47,5 @@ public class SpringBoot {
     public String[] getMatchScore() {
         return match.sets;
     }
+
 }
